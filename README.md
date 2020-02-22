@@ -1,6 +1,6 @@
 # passolusv2
 
-> An electron-nuxt project
+> An electron-nuxt password manager made for the final project of my bootcamp.
 
 #### Build Setup
 
