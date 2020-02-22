@@ -1,9 +1,7 @@
 <template>
   <div>
     <div v-if="authenticatedUser">
-      <p>You are logged in as {{ authenticatedUser.email }}.</p>
-      <p>Logout?</p>
-      <button @click.prevent="logout">Logout</button>
+      <Dashboard authenticatedUser=authenticatedUser></Dashboard>
     </div>
     <div v-else>
       <input type="radio" id="hasAccount" :value="false" v-model="needsAccount" />
@@ -20,6 +18,7 @@
   </div>
 </template>
 <script>
+import Dashboard from '@/pages/Dashboard'
 import firebase from 'firebase'
 
 export default {
@@ -58,6 +57,9 @@ export default {
   },
   created() {
     firebase.auth().onAuthStateChanged(user => (this.authenticatedUser = user))
+  },
+  components:{
+     'Dashboard': Dashboard
   }
 }
 </script>
