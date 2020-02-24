@@ -3,7 +3,7 @@
  * This default configuration can be overwritten in this file
  * @link {https://nuxtjs.org/guide/configuration/}
  */
-
+const path = require('path')
 
 module.exports = {
   mode: 'spa', // or 'universal'
@@ -20,10 +20,20 @@ module.exports = {
     {ssr: true, src: '@/plugins/icons.js'},
     '~/plugins/firebase.js',    
   ],
-  buildModules: [
-    
-  ],
+ css: ['~/assets/scss/tailwind.scss'],
+
   modules: [
-    
+   'nuxt-purgecss'
   ],
+  build: {
+    extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js')
+      }
+    }
+  },
+  purgeCSS: {
+    mode: 'postcss'
+  }
 };

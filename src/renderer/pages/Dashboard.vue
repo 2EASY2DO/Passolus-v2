@@ -2,7 +2,7 @@
   <div v-if="authenticatedUser">
     <p>You are logged in as {{ authenticatedUser.email }}.</p>
     <p>Logout?</p>
-    <button @click.prevent="logout">Logout</button>
+    <button class="border-solid border-4 border-teal-600 text-white bg-green-500" @click.prevent="logout">Logout</button>
   </div>
 </template>
 <script>

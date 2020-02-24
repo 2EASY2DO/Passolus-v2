@@ -5,14 +5,14 @@
     </div>
     <div v-else>
       <input type="radio" id="hasAccount" :value="false" v-model="needsAccount" />
-      <label for="hasAccount">I have an account</label>
+      <label class="text-center"for="hasAccount">I have an account</label>
       <br />
       <input type="radio" id="needsAccount" :value="true" v-model="needsAccount" />
-      <label for="needsAcctouns">I need an account</label>
+      <label class="text-center" for="needsAcctouns">I need an account</label>
       <form @submit.prevent="loginOrRegister">
-        <input type="email" v-model="email" placeholder="Your email address" />
-        <input type="password" v-model="password" placeholder="Your password" />
-        <button v-text="needsAccount ? 'Register' : 'Login'" />
+        <input class="placeholder-red-400 rounded-sm  border border-red-500" type="email" v-model="email" placeholder="Your email address" />
+        <input class="placeholder-red-400 rounded-sm border border-red-500" type="password" v-model="password" placeholder="Your password" />
+        <button class="text-white rounded-sm bg-red-500" v-text="needsAccount ? 'Register' : 'Login'" />
       </form>
     </div>
   </div>
