@@ -18,7 +18,7 @@ module.exports = {
   loading: false,
   plugins: [
     {ssr: true, src: '@/plugins/icons.js'},
-    '~/plugins/firebase.js',    
+    {ssr: true, src: '~/plugins/firebase.js'},
   ],
  css: ['~/assets/scss/tailwind.scss'],
 

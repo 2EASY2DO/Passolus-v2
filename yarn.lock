@@ -23,7 +23,7 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
-"@babel/core@^7.7.5":
+"@babel/core@^7.7.5", "@babel/core@^7.7.7":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.8.4.tgz#d496799e5c12195b3602d0fddd77294e3e38e80e"
   integrity sha512-0LiLrB2PwrVI+a2/IEskBopDYSd8BCb3rOvH7D5tzoWd696TBEduBvuLVm4Nx6rltrLZqvI3MCalB2K2aVzQjA==
@@ -670,7 +670,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.8.3"
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/preset-env@^7.7.6":
+"@babel/preset-env@^7.7.6", "@babel/preset-env@^7.7.7":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.8.4.tgz#9dac6df5f423015d3d49b6e9e5fa3413e4a72c4e"
   integrity sha512-HihCgpr45AnSOHRbS5cWNTINs0TwaR8BS8xIIH+QwiW8cKL0llV91njQMpeMReEPVs+1Ao0x3RLEBLtt1hOq4w==
@@ -830,7 +830,7 @@
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.5.1.tgz#8add41d10c533759a80a376d09d24af0a1009343"
   integrity sha512-fhe4KxEoRLD596tuIkvBXVHedVByI5ALzf5nMraOXsnBxLY0gKcMSXQGwwPxZyeUt/S1VM8DRVXOg9shegEO7g==
 
-"@firebase/app@0.5.4":
+"@firebase/app@0.5.4", "@firebase/app@^0.5.4":
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.5.4.tgz#3c23eabd0f3b2f48daa3530f6c6b18eeb96a8ec2"
   integrity sha512-a+Z13FB/Om3JAv6wTUUW/X8ikRmK66fvbLCGPUKoUtqKow1zxeUelznyKNhF4/WA2wxpo3w5OXzp0G9U09Lecw==
@@ -893,7 +893,7 @@
   resolved "https://registry.yarnpkg.com/@firebase/firestore-types/-/firestore-types-1.9.1.tgz#2a5372b3f314901186edbfd44b898f9120cf3a48"
   integrity sha512-w3pT+RMQOORS8Tvf6wCaW8sq8hklPS4FkWSGCyo/gIbATP7pG8rvQDihN1x6D3if1jILWiZ/uPyl0eazm+MGzw==
 
-"@firebase/firestore@1.11.1":
+"@firebase/firestore@1.11.1", "@firebase/firestore@^1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@firebase/firestore/-/firestore-1.11.1.tgz#71e8904329a5eeebef29dc5a66818e47e043670f"
   integrity sha512-bzGBY1JgzVJs9rdjWNl9ZnJxkqt2ty8oBIplHYCkpa+lp5RNpyvwmuZ6D6vFW67f/2+kEN8Wci82KMIvnoBVtg==
@@ -3101,6 +3101,13 @@ cross-env@7.0.0:
   dependencies:
     cross-spawn "^7.0.1"
 
+cross-env@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-6.0.3.tgz#4256b71e49b3a40637a0ce70768a6ef5c72ae941"
+  integrity sha512-+KqxF6LCvfhWvADcDPqo64yVIB31gv/jQulX2NGzKS/g3GEVz6/pt4wjHFtFWsHMddebWD/sDthJemzM4MaAag==
+  dependencies:
+    cross-spawn "^7.0.0"
+
 cross-spawn@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-3.0.1.tgz#1256037ecb9f0c5f79e3d6ef135e30770184b982"
@@ -4287,7 +4294,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase@^7.9.1:
+firebase@^7.6.1, firebase@^7.9.1:
   version "7.9.1"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-7.9.1.tgz#e2fe163f37220083d47537b12f91f754d2245695"
   integrity sha512-yF80JPxLDXypBxhOeJDKULeP1MwZ/+Clovx3JZOvzH9yoRhIZZBx17/vkQFb7d0b+ICqwrKIofgpPzPef+CMpw==
@@ -9625,6 +9632,18 @@ vue-devtools@5.1.3:
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/vue-devtools/-/vue-devtools-5.1.3.tgz#9f172b420ca87cec4737968769db8080e6e6f7a7"
   integrity sha512-5hfJ4JiPn9hL3CFjrmdx6UOqZATjqBYNSC8ZyGgwnqO2jQ4VfX/9k6KZcxPTWeyHDIX7D4BEIYP0fgrJL3RKTw==
+
+vue-firestore@^0.3.30:
+  version "0.3.30"
+  resolved "https://registry.yarnpkg.com/vue-firestore/-/vue-firestore-0.3.30.tgz#f16116d93e3937042b8d6fdfbb4e6128a92bdcff"
+  integrity sha512-O0P1PzM48+8yaWtsevg9b8ydXFH9TYMqwhSXuzONzMudTlEBcXfhIyH1iHFUyKe/U0MdIvOuuMUgkahR+b7BgA==
+  dependencies:
+    "@babel/core" "^7.7.7"
+    "@babel/preset-env" "^7.7.7"
+    babel-loader "^8.0.6"
+    cross-env "^6.0.3"
+    firebase "^7.6.1"
+    vue "^2.6.11"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

@@ -40,6 +40,8 @@
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
+    "@firebase/app": "^0.5.4",
+    "@firebase/firestore": "^1.11.1",
     "firebase": "^7.9.1",
     "grpc": "^1.24.2",
     "node-gyp": "^6.1.0",
@@ -47,6 +49,7 @@
     "node-sass": "^4.13.1",
     "nuxt-purgecss": "^0.2.1",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "vue-firestore": "^0.3.30"
   }
 }
