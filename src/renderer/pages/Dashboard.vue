@@ -1,8 +1,8 @@
 <template>
 <div v-if="authenticatedUser">
     <div class="p-4 flex items-center justify-around">
-     <p>You are logged in as {{ authenticatedUser.email }}.</p>
-     <button class="p-1 der-solid border-2 border-teal-600" @click.prevent="logout">Logout</button>
+     <p>You are logged in as <span class="text-red-500">{{ authenticatedUser.email }}</span>.</p>
+     <button class="p-1 text-white rounded-sm bg-teal-500" @click.prevent="logout">Logout</button>
     </div>
     <div class="flex justify-center">
       <form @submit.prevent="write">
@@ -10,10 +10,10 @@
       name="passName" value="text" placeholder="Name of site?"/>
       <input class="border border-red-500" v-model="text" type="text"
       name="text" value="text" placeholder="Password to save?"/>
-      <button class="text-indigo-600" >Save</button>
+      <button class="p-1 text-white rounded-sm bg-red-500" >Save</button>
     </form>
     </div>
-    <div class='flex items-center justify-around'>
+    <div class='p-6 flex items-center justify-around'>
       <PasswordsCards v-for="password in passwords" :password='password.password' :passName='password.site'></PasswordsCards>
     </div>
   </div>

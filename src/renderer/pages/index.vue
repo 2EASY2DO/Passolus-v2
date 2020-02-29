@@ -4,16 +4,29 @@
       <Dashboard :authenticatedUser='authenticatedUser'></Dashboard>
     </div>
     <div v-else>
-      <input type="radio" id="hasAccount" :value="false" v-model="needsAccount" />
-      <label class="text-center"for="hasAccount">I have an account</label>
-      <br />
-      <input type="radio" id="needsAccount" :value="true" v-model="needsAccount" />
-      <label class="text-center" for="needsAcctouns">I need an account</label>
-      <form @submit.prevent="loginOrRegister">
+      <div class='flex items-center justify-around'>
+        <img src="@/assets/Passolus2.png" height='198' width='198'>
+      </div>
+      <div class='py-4 flex items-center justify-around'>
+        <form @submit.prevent="loginOrRegister">
         <input class="placeholder-red-400 rounded-sm  border border-red-500" type="email" v-model="email" placeholder="Your email address" />
         <input class="placeholder-red-400 rounded-sm border border-red-500" type="password" v-model="password" placeholder="Your password" />
         <button class="text-white rounded-sm bg-red-500" v-text="needsAccount ? 'Register' : 'Login'" />
-      </form>
+        </form>
+      </div>
+      <br />
+      <div class='flex items-center justify-around'>
+        <div class="text-teal-500">
+          <input type="radio" id="hasAccount" :value="false" v-model="needsAccount" />
+          <label class="text-center"for="hasAccount">I have an account</label>
+        </div>
+      </div>
+       <div class='flex items-center justify-around'>
+        <div class="text-teal-500">
+           <input type="radio" id="needsAccount" :value="true" v-model="needsAccount" />
+           <label class="text-center" for="needsAcctouns">I need an account</label>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -34,14 +47,11 @@ export default {
   },
   methods: {
     register() {
-         alert('password same and registrating')
         firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
     },
     login() {
-            alert(this.email, this.password)
-            alert('loggin in')
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
     },
     loginOrRegister() {
