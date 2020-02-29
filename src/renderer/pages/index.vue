@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="authenticatedUser">
-      <Dashboard authenticatedUser=authenticatedUser></Dashboard>
+      <Dashboard :authenticatedUser='authenticatedUser'></Dashboard>
     </div>
     <div v-else>
       <input type="radio" id="hasAccount" :value="false" v-model="needsAccount" />

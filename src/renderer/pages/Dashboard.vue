@@ -1,29 +1,33 @@
 <template>
-  <div v-if="authenticatedUser">
-    <p>You are logged in as {{ authenticatedUser.email }}.</p>
-    <p>Logout?</p>
-    <button class="border-solid border-4 border-teal-600 text-white
-                   bg-green-500" @click.prevent="logout">Logout</button>
-    <form @submit.prevent="write">
-      <input v-model="passName" type="text" name="passName" value="text" />
-      <input v-model="text" type="text" name="text" value="text" />
-      <button> Write to database</button>
+<div v-if="authenticatedUser">
+    <div class="p-4 flex items-center justify-around">
+     <p>You are logged in as {{ authenticatedUser.email }}.</p>
+     <button class="p-1 der-solid border-2 border-teal-600" @click.prevent="logout">Logout</button>
+    </div>
+    <div class="flex justify-center">
+      <form @submit.prevent="write">
+      <input class="border border-red-500" v-model="passName" type="text"
+      name="passName" value="text" placeholder="Name of site?"/>
+      <input class="border border-red-500" v-model="text" type="text"
+      name="text" value="text" placeholder="Password to save?"/>
+      <button class="text-indigo-600" >Save</button>
     </form>
-    <ul>
-      <li v-for="password in passwords">
-        <span v-text="password.site"></span>
-        <p>Password:</p>
-        <span v-text="password.password"></span>
-      </li>
-    </ul>
-    <button @click.prevent="read">Read</button>
+    </div>
+    <div class='flex items-center justify-around'>
+      <PasswordsCards v-for="password in passwords" :password='password.password' :passName='password.site'></PasswordsCards>
+    </div>
   </div>
 </template>
+
 <script>
+  import PasswordsCards from '@/components/PasswordsCards'
   import { db } from '../plugins/firebase'
   import firebase from 'firebase'
   export default {
    name: 'app',
+   components: {
+    PasswordsCards
+   },
    data(){
     return {
       user: firebase.auth().currentUser,
