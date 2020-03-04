@@ -1,7 +1,7 @@
 <template>
 <div v-if="authenticatedUser">
     <div class="p-4 flex items-center justify-around">
-     <p>You are logged in as <span class="text-red-500">{{ authenticatedUser.email }}</span>.</p>
+     <p class="text-white">You are logged in as <span class="text-red-500">{{ authenticatedUser.email }}</span>.</p>
      <button class="p-1 text-white rounded-sm bg-teal-500" @click.prevent="logout">Logout</button>
     </div>
     <div class="flex justify-center">

@@ -11,7 +11,7 @@
         <form @submit.prevent="loginOrRegister">
         <input class="placeholder-red-400 rounded-sm  border border-red-500" type="email" v-model="email" placeholder="Your email address" />
         <input class="placeholder-red-400 rounded-sm border border-red-500" type="password" v-model="password" placeholder="Your password" />
-        <button class="text-white rounded-sm bg-red-500" v-text="needsAccount ? 'Register' : 'Login'" />
+        <button class="text-white rounded-sm p-1 bg-red-500" v-text="needsAccount ? 'Register' : 'Login'" />
         </form>
       </div>
       <br />
