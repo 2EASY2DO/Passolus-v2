@@ -44,7 +44,7 @@
     "@firebase/firestore": "^1.11.1",
     "clipboard.js": "^1.0.1",
     "firebase": "^7.9.1",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "node-gyp": "^6.1.0",
     "node-pre-gyp": "^0.14.0",
     "node-sass": "^4.13.1",
